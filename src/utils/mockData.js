@@ -1,27 +1,5 @@
 
-import React from "react"
-import ReactDOM from "react-dom/client";
-
-
-const Header = () =>{
-    return (
-        <div className= "header">
-            <div className="logo-container">
-                <img className="logo" src="https://cdn.dribbble.com/users/3232028/screenshots/17250321/media/642c6f61b195e721ee4582d5b574e220.gif" />
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    )
-}
-
-const resList = [
+export const resList = [
     {
       "info": {
         "id": "426776",
@@ -964,69 +942,3 @@ const resList = [
       "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
     }
   ]
-
-const RestaurantCard = (resData) =>{
-    
-    const {cloudinaryImageId, name, cuisines, avgRating, sla, costForTwo} = resData.resData.info;
-    return (
-        <div className="res-card">
-            <img className="res-img" 
-                alt={name}
-                src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId}/>
-            <h3>{name}</h3>
-            <h5>{cuisines.join(", ")}</h5>
-            <h5>{avgRating}  * {costForTwo}</h5>
-            <h5>{sla.deliveryTime} mins</h5>
-        </div>
-    )
-}
-
-const Body = () =>{
-    return (
-        <div className="body">
-            <div className="search-container">
-                Search
-            </div>
-            <div className="restaurant-container">
-                {
-                    resList.map((restaurant) => (
-                        <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-                    ))
-                }
-            </div>
-        </div>
-    )
-}
-
-const Footer = () =>{
-    return (
-        <div className="footer">
-            <div className="copyright">
-                <h3>Copyright@2023 Saturn Platforms</h3>
-            </div>
-            <div className="connect">
-                <h3>Connect</h3>
-                <p className="text-sm">Instagram</p>
-                <p className="text-sm">LinkedIn</p>
-            </div>
-            <div className="connect">
-                <h3>Channels</h3>
-                <p className="text-sm">Youtube</p>
-            </div>
-        </div>
-    )
-}
-
-const AppLayout = () =>{
-    return (
-        <div id="app">
-            <Header/>
-            <Body/>
-            <Footer/>
-        </div>
-    )
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout/>);
