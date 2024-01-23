@@ -26,3 +26,8 @@ FoodDeliveryApp
 - Named export/import
     export const Component
     import {Component} from "./ComponentFolder/Component"
+
+# React Hooks
+- normal js function given by React
+- useState()
+- useEffects()
