@@ -47,3 +47,7 @@
     flex-wrap:wrap;
     align-items: center;
 }
+
+.loginButton:hover{
+    cursor: pointer;
+}
