@@ -31,3 +31,17 @@ FoodDeliveryApp
 - normal js function given by React
 - useState()
 - useEffects()
+
+
+# useState()
+- can be used for API calls;
+- For the cycle - load->render->api->rerender
+- do not use outside of the component
+- do not use it in conditional statements
+- 
+
+# useEffect()
+- contains a callback function and a dependency array
+- if no dependency array is specified, then it is called everytime the component is rendered.
+- if empty dependency array is specified, then it is called only on inital render.
+- if dependency array contains an element/somthing, it is called when it changes
