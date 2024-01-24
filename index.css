@@ -51,3 +51,10 @@
 .loginButton:hover{
     cursor: pointer;
 }
+
+.filters{
+    display: flex;
+}
+.search{
+    padding: 10px;
+}
