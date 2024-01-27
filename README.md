@@ -38,10 +38,19 @@ FoodDeliveryApp
 - For the cycle - load->render->api->rerender
 - do not use outside of the component
 - do not use it in conditional statements
-- 
+- do not use it in loops
 
 # useEffect()
 - contains a callback function and a dependency array
 - if no dependency array is specified, then it is called everytime the component is rendered.
 - if empty dependency array is specified, then it is called only on inital render.
 - if dependency array contains an element/somthing, it is called when it changes
+
+# React Router DOM
+- use to create paths for different components
+- load child components inside parent components
+
+# Types of Routing
+- Client-side
+- Server-side
+
