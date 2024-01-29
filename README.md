@@ -87,3 +87,12 @@ FoodDeliveryApp
 - Built-in hooks = useEffect, useState, useParams
 - A hook is just a utility function
 - RestaurantMenu fetched the data and also displays it. Ideally it shoud only be displaying the data.
+- you can build custom hooks and publish it
+- eg. Online/offline hooks.
+
+# Chunking / Code splitting / Lazy loading / Dynamic bundling / on-demand loading / Dynamic import
+- Load component on demand
+- Done for very large apps to optimize 
+- import {lazy, Suspense} from "react"
+- import -----> const Instamart = lazy(()=>import("./components/Instamart")); 
+- Wrap the component into <Suspense fallback={<h1>Loading..</h1>}></Instamart></Suspense>

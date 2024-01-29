@@ -1,5 +1,5 @@
 
-import React from "react"
+import React, { lazy, Suspense } from "react"
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -10,6 +10,8 @@ import Contact from "./components/ContactClass";
 import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { useOnlineStatus } from "./utils/useOnlineStatus";
+
+const Grocery = lazy(()=>import("./components/Grocery"));
 
 const AppLayout = () =>{
     const onlineStatus = useOnlineStatus();
@@ -43,6 +45,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/restaurants/:resId",
                 element: <RestaurantMenu/>
+            },
+            {
+                path: "/grocery",
+                element: <Suspense><Grocery/></Suspense>
             }
         ]
     }
