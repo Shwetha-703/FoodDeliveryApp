@@ -75,4 +75,8 @@ FoodDeliveryApp
 - render is optimzised by react.
 - all render in done in a single batch
 - Dom manipulation is expensive
-- 
+- componentWillUnmount is called when we leave a page, and clear things, eg, setInterval
+- for functional components, use the return method for cleanup 
+    return ()=>{
+        console.log("Cleanup called");
+    }
