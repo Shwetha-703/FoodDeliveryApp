@@ -9,12 +9,14 @@ import { Error } from "./components/Error";
 import Contact from "./components/ContactClass";
 import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
+import { useOnlineStatus } from "./utils/useOnlineStatus";
 
 const AppLayout = () =>{
+    const onlineStatus = useOnlineStatus();
     return (
         <div id="app">
             <Header/>
-            <Outlet/>
+            {onlineStatus ? <Outlet/>: <h3>Offline</h3>}
             <Footer/>
         </div>
     )

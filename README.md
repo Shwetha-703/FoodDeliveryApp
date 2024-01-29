@@ -80,3 +80,10 @@ FoodDeliveryApp
     return ()=>{
         console.log("Cleanup called");
     }
+
+# Optimizing our app
+- Single responsibility principle
+- Custom hooks
+- Built-in hooks = useEffect, useState, useParams
+- A hook is just a utility function
+- RestaurantMenu fetched the data and also displays it. Ideally it shoud only be displaying the data.
