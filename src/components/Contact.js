@@ -13,9 +13,7 @@ export const Contact = () => {
             <p> ✉️ lifemeinekbaaar@gmail.com</p>
 
             <p> ☎️ +91-98765 43210</p>
-
-            <User name={"Jupiter Function Desu"}/>
-
+            
             <UserClass name = {"Jupiter Class Desu"}/>
     </div>
   )

@@ -67,3 +67,12 @@ FoodDeliveryApp
 - Access variables using the this keyword.
 - Create state variables inside the constructor.
 - Can also deconstruct these variables for simple usage
+- Never update state variables directly in class components, use setState instead
+    thi.setState({count : this.state.count+1})
+- Sequence of rendering - > contructor(props), render(), componentDidMount()
+
+# React Lifecycle
+- render is optimzised by react.
+- all render in done in a single batch
+- Dom manipulation is expensive
+- 
