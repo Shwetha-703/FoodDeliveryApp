@@ -6,7 +6,7 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import { About } from "./components/About";
 import { Error } from "./components/Error";
-import Contact from "./components/Contact";
+import Contact from "./components/ContactClass";
 import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
 

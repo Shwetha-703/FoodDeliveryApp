@@ -4,13 +4,13 @@ import UserClass from './UserClass';
 class Contact extends Component{
     constructor(props){
         super(props);
-        console.log("Parent constructor");
     }
     componentDidMount(){
-        console.log("Parent component did mount");
+    }
+    componentWillUnmount(){
+      console.log("Moving to another page");
     }
     render(){
-        console.log("Parent render");
         return (
           <div>
             <h2>Write a message</h2>
@@ -23,9 +23,6 @@ class Contact extends Component{
                   <p> ☎️ +91-98765 43210</p>
       
                   <UserClass name = {"Jupiter Class Desu"}/>
-                  <UserClass name = {"Saturn Class Desu"}/>
-                  <UserClass name = {"Venus Class Desu"}/>
-                  <UserClass name = {"Mars Class Desu"}/>
           </div>
         )
     }

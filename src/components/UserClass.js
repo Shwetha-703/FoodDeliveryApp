@@ -4,19 +4,23 @@ class UserClass extends React.Component{
     constructor(props){
         super(props);
         this.state = {
+            user:{}
         }
-        console.log(this.props.name+ " constructor");
     }
-    componentDidMount(){
-        console.log(this.props.name +" component did mount");
+    async componentDidMount(){
+        const data = await fetch("https://api.github.com/users/Shwetha-703");
+        const json = await data.json();
+        this.setState(json);
+    }
+    componentDidUpdate(){
+        console.log("Component Updated");
     }
     render(){
         const { name } = this.props;
-        const {  } = this.state;
-        console.log(this.props.name+ " render");
+        const { login } = this.state;
         return (
         <div className="user-card">
-            <h2>{name}</h2>
+            <h2>{name} - {login}</h2>
             <h3>Bengaluru</h3>
             <h4>jupiter@planets.com</h4>
         </div>
