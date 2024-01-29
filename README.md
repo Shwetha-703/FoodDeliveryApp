@@ -54,3 +54,16 @@ FoodDeliveryApp
 - Client-side
 - Server-side
 
+
+# Components
+- Functional components
+- Class-based components
+
+- While functional components are normal functions that return a jsx, class- based components are normal classes
+
+- Class extends React.Component
+- Contains render() function that returns a piece of jsx
+- To pass and recive props, use a constructor with super()
+- Access variables using the this keyword.
+- Create state variables inside the constructor.
+- Can also deconstruct these variables for simple usage

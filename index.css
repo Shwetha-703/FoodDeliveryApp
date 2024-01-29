@@ -62,3 +62,9 @@
 .menuItem{
     justify-content: space-between;
 }
+
+.user-card{
+    padding: 20px;
+    border: 1px solid black;
+    width:fit-content;
+}
