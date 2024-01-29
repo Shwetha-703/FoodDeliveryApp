@@ -13,8 +13,11 @@ export const Contact = () => {
             <p> ✉️ lifemeinekbaaar@gmail.com</p>
 
             <p> ☎️ +91-98765 43210</p>
-            
+
             <UserClass name = {"Jupiter Class Desu"}/>
+            <UserClass name = {"Saturn Class Desu"}/>
+            <UserClass name = {"Venus Class Desu"}/>
+            <UserClass name = {"Mars Class Desu"}/>
     </div>
   )
 }
