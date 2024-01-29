@@ -1,3 +1,4 @@
+
 export const About = () =>{
     return(
         <div className="bg-gray-200 justify-center text-center">
