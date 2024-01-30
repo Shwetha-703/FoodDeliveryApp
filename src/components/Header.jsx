@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
+import { UserContext } from "../utils/userContext";
 
 const Header = () =>{
 
     const [buttonText, setButtonText] = useState(["Login"]);
 
     const onlineStatus = useOnlineStatus();
+
+    const {userName} = useContext(UserContext);
 
     return (
         <div className= "flex justify-between">
@@ -26,6 +29,7 @@ const Header = () =>{
                         const text = buttonText==="Login" ? "Logout" : "Login";
                         setButtonText(text);
                     }} className="loginButton">{buttonText}</button></li>
+                    <li>{userName.loggedInUser}</li>
                 </ul>
             </div>
         </div>

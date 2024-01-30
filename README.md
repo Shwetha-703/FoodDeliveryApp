@@ -99,4 +99,20 @@ FoodDeliveryApp
 
 # CSS
 - ChakraUI, Styled Components, Material UI, Tailwind, Bootstrap
+- Tailwind cons - initial learning curve, lot of code in js file
+
+# High-order components
+- function that takes a component and returns a component
+- added "promoted" to card
+- updated menu items page to show all the differnt categories of food and corresponding items
+
+# Controlled and un-controlled components
+- The behaviour of a child component can be controlled by parent component
+- Eg. Accordian
+
+# Context
+- Passing data from high level component to  component deep in hierachy is by props drilling
+- eg. Logged in user data, Theme-light/dark
+- createContext given by react
+- useContext hook
 - 

@@ -8,7 +8,7 @@ class Contact extends Component{
     componentDidMount(){
     }
     componentWillUnmount(){
-      console.log("Moving to another page");
+      //console.log("Moving to another page");
     }
     render(){
         return (

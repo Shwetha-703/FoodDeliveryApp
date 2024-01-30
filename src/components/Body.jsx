@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withOpenAdded} from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import {Link} from "react-router-dom";
 
@@ -9,6 +9,8 @@ const Body = () =>{
     useEffect(()=>{
         fetchData();
     },[]);
+
+    const RestaurantCardWithOpen = withOpenAdded(RestaurantCard);
 
     const fetchData = async()=>{
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
@@ -28,20 +30,20 @@ const Body = () =>{
                     <button onClick={()=>{
                         const filteredRestaurants = restaurantList.filter(res=>res.info.name.toLowerCase().includes(searchText.toLowerCase()));
                         setFilteredRestaurantList(filteredRestaurants);
-                    }} className="search-btn px-2 py-1 bg-orange-400 rounded-md">Search</button>
+                    }} className="search-btn px-2 py-1 bg-orange-600 rounded-md">Search</button>
                 </div>
                 <div>
                     <button onClick={()=>{
                         const filteredRestaurants = restaurantList.filter((res)=>res.info.avgRating>4);
                         setFilteredRestaurantList(filteredRestaurants);
-                    }} className="search-btn px-2 py-1 bg-orange-400 rounded-md">Top Rated</button>
+                    }} className="search-btn px-2 py-1 bg-orange-600 rounded-md">Top Rated</button>
                 </div>
             </div>
             <div className="flex flex-wrap">
                 {
                     filteredRestaurantList.map((restaurant) => (
                         <Link key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id} >
-                            <RestaurantCard  resData={restaurant} />
+                            {typeof restaurant.info.aggregatedDiscountInfoV3 !== 'undefined' ? <RestaurantCardWithOpen resData={restaurant}/> : <RestaurantCard  resData={restaurant} />}
                         </Link>
                     ))
                 }
