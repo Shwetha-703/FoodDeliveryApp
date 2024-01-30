@@ -113,6 +113,30 @@ FoodDeliveryApp
 # Context
 - Passing data from high level component to  component deep in hierachy is by props drilling
 - eg. Logged in user data, Theme-light/dark
-- createContext given by react
-- useContext hook
-- 
+- createContext given by react, so create a context, eg. UserContext
+- how to use ? import useContext hook and the created context
+- const {logedInUser} = useContext(UserContext); 
+- one can use a context in class-based components as well.
+- if UserContext is created, then use UserContext.Consumer in class-based compoent.
+
+# Redux
+- It is not mandatory
+- When your app get becomes big and the data needs to passed between components, then redux can be used.
+- Redux is used for handling state of our app.
+- Easy debugging
+- Redux - A predictable state container for js application
+- Two libraries =>> 1. React-redux 2. Redux Toolkit
+
+# Redux store
+- a big object
+- kept at a global central place
+- any component can access data from the store, it can read, or write
+- for the object to not become big and clumsy, we have slices. small portion of redux store
+
+# Redux toolkit
+- install @reduxjs/toolkit & react-redux
+- build a store
+- connect store to app (using provider, wrap the app with provider and store as props )
+- slice (cartslice)
+- dispatch action 
+- read using selector
