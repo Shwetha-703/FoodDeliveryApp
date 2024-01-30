@@ -19,7 +19,7 @@ class UserClass extends React.Component{
         const { name } = this.props;
         const { login } = this.state;
         return (
-        <div className="user-card">
+        <div className="user-card border rounded-md w-fit p-1 m-1">
             <h2>{name} - {login}</h2>
             <h3>Bengaluru</h3>
             <h4>jupiter@planets.com</h4>

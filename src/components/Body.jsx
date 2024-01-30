@@ -19,23 +19,25 @@ const Body = () =>{
     return filteredRestaurantList.length===0 ? 
         (<div>Loading...</div>) :
         (
-        <div className="body">
-            <div className="filters">
-                <div className="search">
-                    <input type="text" className="text-box" value={searchText} onChange={(e)=>{
+        <div className="justify-center border rounded-md p-4 m-4">
+            <div className="flex filters p-4">
+                <div className="mx-4">
+                    <input type="text" className="text-box px-3 mx-2 border border-solid border-black rounded-md" value={searchText} onChange={(e)=>{
                         setSearchText(e.target.value);
                     }} />
                     <button onClick={()=>{
                         const filteredRestaurants = restaurantList.filter(res=>res.info.name.toLowerCase().includes(searchText.toLowerCase()));
                         setFilteredRestaurantList(filteredRestaurants);
-                    }} className="search-btn">Search</button>
+                    }} className="search-btn px-2 py-1 bg-orange-400 rounded-md">Search</button>
                 </div>
-                <button onClick={()=>{
-                    const filteredRestaurants = restaurantList.filter((res)=>res.info.avgRating>4);
-                    setFilteredRestaurantList(filteredRestaurants);
-                }}>Top Rated</button>
+                <div>
+                    <button onClick={()=>{
+                        const filteredRestaurants = restaurantList.filter((res)=>res.info.avgRating>4);
+                        setFilteredRestaurantList(filteredRestaurants);
+                    }} className="search-btn px-2 py-1 bg-orange-400 rounded-md">Top Rated</button>
+                </div>
             </div>
-            <div className="restaurant-container">
+            <div className="flex flex-wrap">
                 {
                     filteredRestaurantList.map((restaurant) => (
                         <Link key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id} >

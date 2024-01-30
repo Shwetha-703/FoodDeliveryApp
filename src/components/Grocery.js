@@ -1,6 +1,6 @@
 const Grocery = () =>{
     return (
-        <div id = "grocery">
+        <div className="justify-center border rounded-md p-4 m-4">
             <h1>Welcome to the Grocery store!</h1>
             <h2>What do you have in mind?</h2>
             <h4>Bread</h4>

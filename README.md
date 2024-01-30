@@ -95,4 +95,8 @@ FoodDeliveryApp
 - Done for very large apps to optimize 
 - import {lazy, Suspense} from "react"
 - import -----> const Instamart = lazy(()=>import("./components/Instamart")); 
-- Wrap the component into <Suspense fallback={<h1>Loading..</h1>}></Instamart></Suspense>
+- Wrap the component into Suspense with fallback component/jsx code
+
+# CSS
+- ChakraUI, Styled Components, Material UI, Tailwind, Bootstrap
+- 

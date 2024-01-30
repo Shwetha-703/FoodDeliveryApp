@@ -10,6 +10,7 @@ import Contact from "./components/ContactClass";
 import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { useOnlineStatus } from "./utils/useOnlineStatus";
+import Cart from "./components/Cart";
 
 const Grocery = lazy(()=>import("./components/Grocery"));
 
@@ -49,6 +50,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/grocery",
                 element: <Suspense><Grocery/></Suspense>
+            },
+            {
+                path: "/cart",
+                element: <Cart/>
             }
         ]
     }
