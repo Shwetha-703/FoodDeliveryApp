@@ -140,3 +140,26 @@ FoodDeliveryApp
 - slice (cartslice)
 - dispatch action 
 - read using selector
+
+# Testing
+- Types
+    - Manual
+    - Developer testing - Test cases
+
+# Types of testing that a developer can do
+- Unit testing - test components in isolation
+- Integration testing - testing integration of components
+- End-to-end testing
+
+# Libraries for testing
+- React testing library
+- Install react testing library
+- Install jest
+- Install babel for jest
+- Configure babel
+- Configure parcel
+- jest init to create jest.congif.js
+- if jest>28, install jsdom
+- Install @babel/preset-react - to make jsx work, npm install -D  @babel/preset-react
+- Include @babel/preset-react inside my babel config
+- Install @testing-library/jest-dom

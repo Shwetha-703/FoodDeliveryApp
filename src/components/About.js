@@ -6,7 +6,7 @@ export const About = () =>{
                 about #namaste react
             </h1>
             <p  className='p-2'>Namaste!! Namma!! Namaskar!!</p>
-            <p  className='p-2'>
+            <p role="react-info"  className='p-2'>
                 <a href="https://react.dev/">React</a> is a declarative, component-based library, you can learn once, and write anywhere
             </p>
         
